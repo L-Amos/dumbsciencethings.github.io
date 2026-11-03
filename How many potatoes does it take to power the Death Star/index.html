@@ -1,0 +1,22 @@
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <link rel="icon" href="favicon.png">
+  <script src="script.js"></script>
+  <title>Potatoes!</title>
+</head>
+
+<container class="main">
+  <h1>How Many Potatoes?</h1>
+
+  <form name="potato_calc" onsubmit="calc_num_potatoes();return false">
+    Power (watts): <input name="power"></input>
+    <br />
+    Amount of Time (hours): <input name="time"></input>
+    <br />
+    <input type=submit></input> <br />
+  <label id="potatoes_answer">Enter some numbers and see the answer!</label>
+</container>
+
