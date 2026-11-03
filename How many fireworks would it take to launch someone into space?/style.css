@@ -19,6 +19,10 @@ input[type="range"] {
   width:100%;
 }
 
+strong {
+  color: white;
+}
+
 h1, h2, h3 {
   color: #f3f4f6;
   border-width: 0;
