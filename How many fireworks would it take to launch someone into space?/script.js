@@ -35,6 +35,7 @@ function calc_num() {
 }
 
 function calc2() {
+  document.forms["height_calc"]["mortar_weight"].disabled = false;
   weight = Number(document.forms["height_calc"]["weight"].value) ;
   if (!check_positive_number(weight)) {
     return
