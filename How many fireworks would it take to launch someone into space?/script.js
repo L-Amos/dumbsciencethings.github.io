@@ -35,7 +35,6 @@ function calc_num() {
 }
 
 function calc2() {
-  document.forms["height_calc"]["mortar_weight"].disabled = false;
   weight = Number(document.forms["height_calc"]["weight"].value) ;
   if (!check_positive_number(weight)) {
     return
@@ -44,6 +43,7 @@ function calc2() {
   if (!check_positive_number(num_fireworks)) {
     return
   }
+  document.forms["height_calc"]["mortar_weight"].disabled = false;
   /* Calculate */
   v = Math.sqrt(2*G*M*(1/R_E - 1/(R_E + height)))
   m_m = document.forms["height_calc"]["mortar_weight"].value
