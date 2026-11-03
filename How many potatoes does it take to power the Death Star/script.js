@@ -22,7 +22,7 @@ function calc_num_potatoes() {
     }
   /* Calculate and display required number of potatoes */
   num_potatoes = Math.ceil((power * time * 3600)/(POTATO_ENERGY))
-  document.getElementById("potatoes_answer").innerHTML = "To power your " + power + "W device for " + time + " hours, you would need <strong>" + num_potatoes + " potatoes!</strong>"
+  document.getElementById("potatoes_answer").innerHTML = `To power your ${power}W device for ${time} hours, you would need <strong>${num_potatoes} potatoes!</strong>`
 }
 
 /**
@@ -41,7 +41,7 @@ function calc_time() {
     }
   /* Calculate and display the amount of time you have */
   time = Math.round((POTATO_ENERGY*num_potatoes/(power*3600))*100)/100
-  document.getElementById("time_answer").innerHTML = "If you had " + num_potatoes + " potatoes, you could power your " + power + "W device for <strong>" + time + " hours!</strong>"
+  document.getElementById("time_answer").innerHTML = `If you had ${num_potatoes} potatoes, you could power your ${power}W device for <strong>${time} hours!</strong>`
 }
 
 /**
