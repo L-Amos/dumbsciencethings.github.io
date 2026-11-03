@@ -13,9 +13,7 @@
     Weight: <input name="weight"></input>
     Height: <input name="height"></input>
     <input type=submit></input><br /> <br />
-    <div id="slider_container" style="display:none">
-      <input name="mortar_weight" type="range" oninput="calc_num()"><p style="text-align:center">Mortar Weight<p>
-    </div>
+    <input name="mortar_weight" type="range" oninput="calc_num()" disabled><p style="text-align:center">Mortar Weight<p>
   </form>
   <label id="answer">Enter some numbers and see the answer!</label>
 
@@ -25,9 +23,7 @@
     Weight: <input name="weight">
     Number of Fireworks: <input name="num_fireworks">
     <input type=submit></input><br /> <br />
-    <div style="display:grid">
-      <input name="mortar_weight" type="range" oninput="calc2()" min="0.01" max="1.01" step="0.1"><p style="text-align:center">Mortar Weight<p>
-    </div>
+    <input name="mortar_weight" type="range" oninput="calc2()" min="0.01" max="1.01" step="0.1"><p style="text-align:center">Mortar Weight<p>
   </form>
   <label id="answer2">Enter some numbers and see the answer!</label>
 </container>

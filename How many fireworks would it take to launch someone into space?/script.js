@@ -24,7 +24,7 @@ function calc() {
   document.forms["firework_calc"]["mortar_weight"].max = m_m
   document.forms["firework_calc"]["mortar_weight"].min = m_m/10
   document.forms["firework_calc"]["mortar_weight"].step = m_m/10
-  document.getElementById("slider_container").style.display = "grid"
+  document.forms["firework_calc"]["mortar_weight"].disabled = false
   calc_num()
 }
 
