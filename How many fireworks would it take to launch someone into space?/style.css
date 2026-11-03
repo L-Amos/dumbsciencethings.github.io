@@ -1,12 +1,27 @@
 body {
-  display: grid;
-  place-items: center;
-  height: 100vh;
+  display: flex;
+  justify-content: center;
   background-color: #4b5563;
   color: #d1d5db;
   font-family: "Inter Tight", sans-serif;
-  font-size: 1.5rem
+  font-size: 1.5rem;
  }
+
+ container.main {
+  display: grid;
+  place-items: center;
+  padding: 1em;
+  width: 70vw;
+ }
+
+input[type="range"] {
+  display: grid;
+  width:100%;
+}
+
+strong {
+  color: white;
+}
 
 h1, h2, h3 {
   color: #f3f4f6;
