@@ -9,31 +9,30 @@ var height
 var v
 var m_m
 
-function calc_vel_mortar_weight() {
-  weight = Number(document.forms["firework_calc"]["weight"].value) ;
-  if (!check_positive_number(weight)) {
-    return
-  }
-  height = Number(document.forms["firework_calc"]["height"].value) ;
-  if (!check_positive_number(height)) {
-    return
-  }
+function calc_num_fireworks(change_weight_height=false) {
+  if (change_weight_height) {
+    weight = Number(document.forms["firework_calc"]["weight"].value) ;
+    if (!check_positive_number(weight)) {
+      return
+    }
+    height = Number(document.forms["firework_calc"]["height"].value) ;
+    if (!check_positive_number(height)) {
+      return
+    }
   /* Calculate */
-  v = Math.sqrt(2*G*M*(1/R_E - 1/(R_E + height)))
-  m_m = Math.floor(M_S*V_S/v*1000)/1000
-  document.forms["firework_calc"]["mortar_weight"].max = m_m
-  document.forms["firework_calc"]["mortar_weight"].min = m_m/10
-  document.forms["firework_calc"]["mortar_weight"].step = m_m/10
-  document.forms["firework_calc"]["mortar_weight"].disabled = false
-  calc_num_fireworks()
-}
-
-function calc_num_fireworks() {
+    v = Math.sqrt(2*G*M*(1/R_E - 1/(R_E + height)))
+    m_m = Math.floor(M_S*V_S/v*1000)/1000
+    document.forms["firework_calc"]["mortar_weight"].max = m_m
+    document.forms["firework_calc"]["mortar_weight"].min = m_m/10
+    document.forms["firework_calc"]["mortar_weight"].step = m_m/10
+    document.forms["firework_calc"]["mortar_weight"].value = m_m/2
+    document.forms["firework_calc"]["mortar_weight"].disabled = false
+  } 
   m_m = document.forms["firework_calc"]["mortar_weight"].value
   num_fireworks = Math.ceil((weight*v)/(M_S*V_S - m_m*v))
   document.getElementById("fireworks_answer").innerHTML = "The heaviest your mortar could be is " + document.forms["firework_calc"]["mortar_weight"].max + "kg. With a mortar weight of " + m_m +  "kg you would need " + num_fireworks + " fireworks!"
 }
-
+  
 function calc_vel_height_reached() {
   weight = Number(document.forms["height_calc"]["weight"].value) ;
   if (!check_positive_number(weight)) {
