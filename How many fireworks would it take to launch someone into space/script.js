@@ -39,7 +39,7 @@ function calc_num_fireworks(change_weight_height=false) {
   /* Calculate and display required number of fireworks */
   m_m = document.forms["firework_calc"]["mortar_weight"].value
   num_fireworks = Math.ceil((weight*v)/(M_S*V_S - m_m*v))
-  document.getElementById("fireworks_answer").innerHTML = "The heaviest your mortar could be is " + document.forms["firework_calc"]["mortar_weight"].max + "kg. With a mortar weight of " + m_m +  "kg you would need <strong>" + num_fireworks + " fireworks!</strong>"
+  document.getElementById("fireworks_answer").innerHTML = `The heaviest your mortar could be is ${document.forms["firework_calc"]["mortar_weight"].max}kg. With a mortar weight of ${m_m}kg you would need <strong>${num_fireworks} fireworks!</strong>`
 }
 
 /**
@@ -69,13 +69,13 @@ function calc_vel_height_reached(change_weight_num_fireworks=false) {
   v = Math.round(v*100)/100
   /* Check if escaped Earth's gravitational field */
   if (v > ESCAPE_VEL) {
-    var last_part_of_answer = " <strong>escape Earth's gravitational field completely.</strong>"
+    var last_part_of_answer = ` <strong>escape Earth's gravitational field completely.</strong>`
   }
 else {
-    var last_part_of_answer = "reach a height of <strong>" + height + " metres</strong>  before crashing back to the ground."
+    var last_part_of_answer = `reach a height of <strong>${height} metres</strong> before crashing back to the ground.`
   }
   /* Display answer */
-  document.getElementById("height_answer").innerHTML = "With " + num_fireworks + " fireworks and a mortar weight of " + m_m + "kg, weighing  " + weight + "kg yourself, you would shoot up at a velocity of " + v + "m/s and " + last_part_of_answer 
+  document.getElementById("height_answer").innerHTML = `With ${num_fireworks} fireworks and a mortar weight of ${m_m}kg, weighing ${weight}kg yourself, you would shoot up at a velocity of ${v}m/s and ${last_part_of_answer}`
 }
 
 /**
