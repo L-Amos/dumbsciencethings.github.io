@@ -10,9 +10,8 @@ body {
  container.main {
   display: grid;
   place-items: center;
-  height: auto;
-  border: 2px solid white;
   padding: 1em;
+  width: 70vw;
  }
 
 input[type="range"] {
