@@ -6,27 +6,29 @@
   <script src="script.js"></script>
 </head>
 
-<h1>How Many Fireworks?</h1>
+<container class="main">
+  <h1>How Many Fireworks?</h1>
 
-<form name="firework_calc" onsubmit="calc();return false">
-  Weight: <input name="weight"></input>
-  Height: <input name="height"></input>
-  <input type=submit></input><br /> <br />
-  <div id="slider_container" style="display:none">
-    <input name="mortar_weight" type="range" oninput="calc_num()"><p style="text-align:center">Mortar Weight<p>
-  </div>
-</form>
-<label id="answer">Enter some numbers and see the answer!</label>
+  <form name="firework_calc" onsubmit="calc();return false">
+    Weight: <input name="weight"></input>
+    Height: <input name="height"></input>
+    <input type=submit></input><br /> <br />
+    <div id="slider_container" style="display:none">
+      <input name="mortar_weight" type="range" oninput="calc_num()"><p style="text-align:center">Mortar Weight<p>
+    </div>
+  </form>
+  <label id="answer">Enter some numbers and see the answer!</label>
 
-<h1>How High?</h1>
+  <h1>How High?</h1>
 
-<form name="height_calc" onsubmit="calc2();return false">
-  Weight: <input name="weight">
-  Number of Fireworks: <input name="num_fireworks">
-  <input type=submit></input><br /> <br />
-  <div style="display:grid">
-    <input name="mortar_weight" type="range" oninput="calc2()" min="0.01" max="1.01" step="0.1"><p style="text-align:center">Mortar Weight<p>
-  </div>
-</form>
-<label id="answer2">Enter some numbers and see the answer!</label>
+  <form name="height_calc" onsubmit="calc2();return false">
+    Weight: <input name="weight">
+    Number of Fireworks: <input name="num_fireworks">
+    <input type=submit></input><br /> <br />
+    <div style="display:grid">
+      <input name="mortar_weight" type="range" oninput="calc2()" min="0.01" max="1.01" step="0.1"><p style="text-align:center">Mortar Weight<p>
+    </div>
+  </form>
+  <label id="answer2">Enter some numbers and see the answer!</label>
+</container>
 
