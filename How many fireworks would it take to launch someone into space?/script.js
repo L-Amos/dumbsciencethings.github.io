@@ -81,7 +81,7 @@ else {
 /**
  * Tests whether a given input is a positive number.
  * @param {float} input Input to test
- * @returns
+ * @returns 0 if test fails, 1 if test passes.
  */
 function check_positive_number(input) {
   if (isNaN(input) || (input < 0) || input == "") {
