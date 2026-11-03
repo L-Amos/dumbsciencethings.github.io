@@ -47,17 +47,19 @@ function calc_num_fireworks(change_weight_height=false) {
  * @param {boolean} change_weight_num_fireworks Bool value for whether weight/num_fireworks has changed
  * @returns none
  */
-function calc_vel_height_reached() {
-  /* Check inputs */
-  weight = Number(document.forms["height_calc"]["weight"].value) ;
-  if (!check_positive_number(weight)) {
-    return
+function calc_vel_height_reached(change_weight_num_fireworks=false) {
+  if (change_weight_num_fireworks) {
+    /* Check inputs */
+    weight = Number(document.forms["height_calc"]["weight"].value) ;
+    if (!check_positive_number(weight)) {
+      return
+    }
+    num_fireworks = Number(document.forms["height_calc"]["num_fireworks"].value) ;
+    if (!check_positive_number(num_fireworks)) {
+      return
+    }
+    document.forms["height_calc"]["mortar_weight"].disabled = false;
   }
-  num_fireworks = Number(document.forms["height_calc"]["num_fireworks"].value) ;
-  if (!check_positive_number(num_fireworks)) {
-    return
-  }
-  document.forms["height_calc"]["mortar_weight"].disabled = false;
   /* Calculate */
   v = Math.sqrt(2*G*M*(1/R_E - 1/(R_E + height)))
   m_m = document.forms["height_calc"]["mortar_weight"].value
